@@ -1,0 +1,106 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    note.txt                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: esaci <marvin@42.fr>                       +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2020/02/09 17:58:52 by esaci             #+#    #+#              #
+#    Updated: 2020/02/14 20:49:58 by esaci            ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
+Ne pas oublue :
+	- broadcast et reseau a comptabiliser
+	-
+
+C AUOI UNE IP ?
+- Protocole informatique de connexion qui gère la transmission des données par Internet.
+  Une suite de numeros qui identifie chaque ordi dans un reseau 
+	- permet des echanges entre les ordi clients et le serveur
+		: il  y a different type de protocole IPV4, IPV6
+				IPV4 ; 4 chiffres entre 0 et 255   32 bits
+				IPV6 : 8 chiffres entre 0 et 65535 128 bits
+
+C QUOI UN MASQUE DE RESEAU
+	32 bits : 1 reseau et 0 machine
+			255 255 0 0
+			11111111 11111111 00000000 0000000
+	Separe le reseau en plusieurs partie disctincte
+	- Sert a diviser une adresse ip en sous reseau et specifier les ordinateurs present dans ces sous reseaux et leur permet de communiquer entre eux
+	et permet de definir une gamme d'IP
+	 :masque de sous reseau separe partie reseau et celle de la machine
+C QUOI LE SOUS RESEAU DUNE IP AVEC UN MASQUE DE SOUS RESEAU
+	
+Quel sont les différentes classes d’IP
+	CLASS A B C D E
+		prive :
+
+		A :10.0.0.0 a 10.255.255.255
+		B : 172.16.0.0 a 172.31.255.255
+		C : 192.168.1.0 a 192.168.255.255
+
+
+---
+141.230.232.000 a 141.230.235.255
+
+DHCP :
+	- Transport UDP
+Modele TCP et UDP : 
+- TCP mode connecte securie Transmission Control Protocol
+	protocole le plus utilisé sur internet
+	Les informations sont testées et vérifiés.
+	si un ordinateur ne reçois pas correctement un packet, ce-dernier est renvoyé
+	Le header de TCP est de 20 bytes
+
+	TCP est utilisé pour les protocoles HTTP , HTTPS , FTP, SMTP
+
+- UDP mode non connecte non fiable  User Datagram Protocol
+	 Il n’y a pas de garantie sur la réception des données
+	 ne necessite pas de verification a la reception
+	 Le header de UDP est de 8 bytes
+
+
+7 couches du modele OSI :
+
+La couche physique :
+ - communication de bites de facon brut
+La couche liaison de données :
+ - fleeeeeeeeeeeeeme
+
+A quoi sert un serveur DHCP et qu’est-ce que le protocole DHCP ?
+
+ - DHCP signifie Dynamic Host Configuration Protocol
+ - un protocole qui permet à un ordinateur qui se connecte sur un réseau local d’obtenir dynamiquement et automatiquement sa configuration IP.
+
+
+OSI : 
+                                     Application - Presentation - Session - Transport - Reseau - Liaison - Physique
+
+UDP :
+
+Faux :
+	UDP est fiable car il garantit la livraison des donnees au routeur de destination
+Vrai :
+	UDP NE DISPOSE AUE DU MECANISME DE CONTROLE DERREUR DE BASE UTILISANT DES SOMMES DE CONTROLE
+	UDP EST UN PROTOCOLE ORIENTE DATAGRAMME
+	UDP EST EN CHARGE DE LA DIFFUSION
+	UDP EST PLUS RAPIDE ET EFFICACE AUE TCP
+	IL BY A PAS DE SEQUENCEMENT DES DONNEE DANS UDP. SI LA COMMANDE EST REAUISE ELLE DOIT ETRE GEREE PAR LA COUCHE APPLICATIOn
+
+TCP :
+
+Faux :
+	La livraison des donnees a la destination ne peut pas etre garantie en TCP
+Vrai :
+	TCP FOURNIT DES MECANISMES DE VERIFICATION DERRREUR ETENDUS. CEST PARCQUIL FOURNIT LE CONTROLE DE FLUX ET LAQUITTEMENT DES DONNEEES
+	TCP EST COMPARATIVEMENT PLUS LENT AUE UDP
+	TCP EST UN PROTOCOLE ORIENTE CONNEXION
+	LE SEAUENCAGE DES DONNEES EST UNE CARACTERISTIAUE DE TCP ca arrive dans lordre
+	TCP NE PREND PAS EN CHARGE LA DIFFUSION
+
+Ping :
+- ICMP est le protocole utilise
+
+
+674141414141426552766c316e4b47784957393161746757545177796b746247715048494849584a7a426c32314779524c576671666f59466875667144755730586a7272425454336b475471657664574d53377a4e2d4c4c392d5a443346776d4f486a5178677a743353614b72654456456f645974513538336850344b4b7650745f4349575f526b427547436d566a4a564c6454756430333656364e73637a644e466c5074783630373656644d59436d6b68735247355738307a72713058465a6250553653476361564261565433714f44396a6932626166693161623158685053563934704553494e6f76394b64633237304738527048426144556a52494743765a32646467716d4c64544e314e35745a41613334636673486870644e4e62436e2d5233785146454863427236546c66725a6950534842416a476b2d684361715a6b6f3652324d6d356f4468706b354a626e585a357335385157323430655466424841487679524f7a687069707a50717661312d7150554c75654e483858422d49576b4e7445496a313966704130476e6741704b6d546a667546594f4f6b624835316f48484a655451326649754f6263494f3672762d36366c587646397a524a656f52765639494d6c5670376f305f437a47342d46742d36526f354c4b414f6a76413d3d
