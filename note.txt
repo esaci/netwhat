@@ -1,106 +1,172 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    note.txt                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: esaci <marvin@42.fr>                       +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2020/02/09 17:58:52 by esaci             #+#    #+#              #
-#    Updated: 2020/02/14 20:49:58 by esaci            ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
+IP Internet Protocol:
+-IPV4 ; 4 chiffres entre 0 et 255   32 bits
+ IPV6 : 8 chiffres entre 0 et 65535 128 bits
 
-Ne pas oublue :
-	- broadcast et reseau a comptabiliser
-	-
-
-C AUOI UNE IP ?
-- Protocole informatique de connexion qui gère la transmission des données par Internet.
-  Une suite de numeros qui identifie chaque ordi dans un reseau 
-	- permet des echanges entre les ordi clients et le serveur
-		: il  y a different type de protocole IPV4, IPV6
-				IPV4 ; 4 chiffres entre 0 et 255   32 bits
-				IPV6 : 8 chiffres entre 0 et 65535 128 bits
-
-C QUOI UN MASQUE DE RESEAU
-	32 bits : 1 reseau et 0 machine
-			255 255 0 0
-			11111111 11111111 00000000 0000000
-	Separe le reseau en plusieurs partie disctincte
-	- Sert a diviser une adresse ip en sous reseau et specifier les ordinateurs present dans ces sous reseaux et leur permet de communiquer entre eux
+MASQUE DE RESEAU
+	- Sert a diviser une adresse ip en sous reseau et specifier les ordinateurs 		present dans ces sous reseaux et leur permet de communiquer entre eux
 	et permet de definir une gamme d'IP
-	 :masque de sous reseau separe partie reseau et celle de la machine
-C QUOI LE SOUS RESEAU DUNE IP AVEC UN MASQUE DE SOUS RESEAU
 	
 Quel sont les différentes classes d’IP
-	CLASS A B C D E
 		prive :
 
-		A :10.0.0.0 a 10.255.255.255
-		B : 172.16.0.0 a 172.31.255.255
-		C : 192.168.1.0 a 192.168.255.255
+		A : 10.0.0.0 a 		10.255.255.255      masque 	255.0.0.0
+		B : 172.16.0.0 a 	172.31.255.255       		 	255.255.0.0
+		C : 192.168.1.0 a 	192.168.255.255   	 		255.2555.255.0
+
+•	Classe	•	Bits de départ	•	Début	•	Fin	•	CIDR (Masque)	•	Masque de sous réseau par défault
+•	Classe A	•	0	•	0.0.0.0	•	127.255.255.255	•	/8	•	255.0.0.0
+•	Classe B	•	10	•	128.0.0.0	•	191.255.255.255	•	/16	•	255.255.0.0
+•	Classe C	•	110	•	192.0.0.0	•	223.255.255.255	•	/24	•	255.255.255.0
+•	Classe D	•	1110	•	224.0.0.0	•	239.255.255.255	•	•	Non définie
+•	Classe E	•	1111	•	240.0.0.0	•	255.255.255.255	•	•	Non définie
 
 
----
-141.230.232.000 a 141.230.235.255
+- TCP (mode connecte securise) Transmission Control Protocol
+	- protocole le plus utilisé sur internet
+	- Les informations sont testées et vérifiés.
+	- Le header du TCP est de 20 bytes
+	- TCP est utilisé pour les protocoles HTTP , HTTPS , FTP, SMTP
+	- Ne garantis pas la diffusion
+	- PAS DATAGRAM
+	
 
-DHCP :
-	- Transport UDP
-Modele TCP et UDP : 
-- TCP mode connecte securie Transmission Control Protocol
-	protocole le plus utilisé sur internet
-	Les informations sont testées et vérifiés.
-	si un ordinateur ne reçois pas correctement un packet, ce-dernier est renvoyé
-	Le header de TCP est de 20 bytes
+- UDP (mode non connecte non fiable)  User Datagram Protocol
+	- Il n’y a pas de garantie sur la réception des données
+	- Ne necessite pas de verification a la reception
+	- Le header de UDP est de 8 bytes
+	- Bon pour bootstrapping, DHCP, transfert de fichier, jv etc
 
-	TCP est utilisé pour les protocoles HTTP , HTTPS , FTP, SMTP
-
-- UDP mode non connecte non fiable  User Datagram Protocol
-	 Il n’y a pas de garantie sur la réception des données
-	 ne necessite pas de verification a la reception
-	 Le header de UDP est de 8 bytes
-
-
-7 couches du modele OSI :
-
-La couche physique :
- - communication de bites de facon brut
-La couche liaison de données :
- - fleeeeeeeeeeeeeme
-
-A quoi sert un serveur DHCP et qu’est-ce que le protocole DHCP ?
-
- - DHCP signifie Dynamic Host Configuration Protocol
- - un protocole qui permet à un ordinateur qui se connecte sur un réseau local d’obtenir dynamiquement et automatiquement sa configuration IP.
+Les applications multimédia (audio, vidéo), des jeux multi-joueurs en temps réel, l'échange de fichiers, etc n'ont pas besoin du TCP et peuvent même les limiter car il est nécessaire de gérer les pertes et les erreurs plutôt que d'essayer de les éviter.
+* UDP : est souvent utilisé pour le temps réel mais est moins fiable
+* SCTP : comme le TCP, mais permettant la communication multi-cibles comme l'UDP
+* MPTCP : surcouche de TCP, exploite tous les chemins disponibles en parallèle, et donc améliore significativement les performances et la fiabilité d'une connexion.
 
 
-OSI : 
-                                     Application - Presentation - Session - Transport - Reseau - Liaison - Physique
+7 couches du Modele OSI Open Systems Interconnection:
 
-UDP :
+Propose par ISO International Organization for Standardization:
 
+- Application - Presentation - Session - Transport - Reseau - Liaison - Physique
+
+Couche Hautes(donnee):
+
+Application  	Point d'accès aux services réseau
+Presentation 	Fait la conversion entre données manipulées et octets transmis
+Session	     	Gère la synchronisation entre les échanges, permet l'ouverture et la fermeture de la session
+Transport	 	Gère la communication de proche en proche, généralement entre machine : routage et adressage des paquets
+
+Couches maeterielles(paquet,trame, Bit):
+
+Réseau	    	 Détermine le parcours des données et l'adressage logique (Adresse IP)
+Liaison	     	Gère la communication entre 2 machines directement connectées entre elles, ou par commutateur
+Physique	 	Gère la transmission des signaux entre les entités. Limité à l'émission et à la réception d'un bit ou d'un train de bit
+
+Pas forcément compatible avec la pile IP
+Le modèle OSI est connu pour ses fonctionnalités permettant de garantir une bonne qualité de service.
+Il est universel, on retrouve ce modèle dans beaucoup de système, car il permet une meilleur organisation des normes par rapport aux systèmes applicatifs.
+Num	Couche			Norme
+7	Application		Web
+6	Présentation	         HTML / XML
+5	Session			HTTP / HTTPS
+4	Transport		        	TCP
+3	Réseau			IP
+2	Liaison			Ethernet / xDSL
+1	Physique		         RJ45 / RJ11 / RJ12 / Cable cat. 5 et +
+
+DHCP Dynamic Host Configuration Protocol :
+ - un protocole qui permet à un ordinateur qui se connecte sur un réseau local d’obtenir dynamiquement et automatiquement 
+   sa configuration IP.
+ - La durée de vie du bail (Libère l'adresse au bout d'un moment. Si l'ordinateur est encore connecté il lui redonnera une   nouvelle adresse IP. Ce système permet de faire tourner les adresses IP)
+ - Une adresse IP (Adresse dynamique : attribution statique)
+ - Et les paramètres réseau (Adresse passerelle, Adresse du DNS)
+
+DNS Domain Name System:
+- Permet de traduire les noms de domaines en adresse IP
+
+> Configuration minimale pour faire communiquer deux adresses en utilisant l'IP :
+Ordinateur -> Passerelle -> Internet -> Passerelle -> Serveur 172.18.3.82 172.18.0.253
+
+
+> Une passerelle :
+Dispositif permettant de relier deux réseaux informatiques, de type différent, ensemble :
+* Répéteur (niveau 1)
+* Pont (niveau 2)
+* Relais / Routeur (niveau 3)
+Une passerelle est plus communément appelée modem-routeur ou box, relie un réseau local à Internet. Elle sert également de pare-feu, de proxy, et effectue la qualité de service. Une passerelle par défaut est une passerelle qui gère le routage au niveau IP.
+
+
+Routage d'IP :
+Sélection des chemins, dans un réseau, par lesquels on va faire acheminer les données, de l'expéditeur vers le ou les destinataire(s).
+
+
+Ports :
+* 0 à 1023 : Controlés et assignés par l'IANA, appelés Well Known Ports
+* 1024 à 49156 : Ports enregistrés
+* 49152 à 65535 : Ports dynamiques
+Une adresse IP + un port = un socket : Chemin par lequel transitent des paquets
+
+
+
+UDP : 
 Faux :
-	UDP est fiable car il garantit la livraison des donnees au routeur de destination
+	- UDP est fiable car il garantit la livraison des donnees au routeur de destination
+	- UDP ne prend pas en charge la diffusion
 Vrai :
-	UDP NE DISPOSE AUE DU MECANISME DE CONTROLE DERREUR DE BASE UTILISANT DES SOMMES DE CONTROLE
-	UDP EST UN PROTOCOLE ORIENTE DATAGRAMME
-	UDP EST EN CHARGE DE LA DIFFUSION
-	UDP EST PLUS RAPIDE ET EFFICACE AUE TCP
-	IL BY A PAS DE SEQUENCEMENT DES DONNEE DANS UDP. SI LA COMMANDE EST REAUISE ELLE DOIT ETRE GEREE PAR LA COUCHE APPLICATIOn
+	-  UDP ne dispose que du mecanisme de controle d'erreur de base UTILISANT DES SOMMES DE CONTROLE
+	- UDP est un protocole oriente datagramme
+	- UDP ne prend pas en charge la diffusion
+	- UDP ne dispose que du mecanisme de controle d'erreur de base
+	- UDP est plus rapide, plus simple et plus efficace que TCP
+	- IL N’Y A PAS DE SEQUENCEMENT DES DONNEE DANS UDP  SI LA COMMANDE EST REQUISE ELLE DOIT ETRE GEREE PAR LA COUCHE 	APPLICATIOn
+	- UDP est un Protocole
 
 TCP :
 
 Faux :
-	La livraison des donnees a la destination ne peut pas etre garantie en TCP
+	 - La livraison des donnees a la destination ne peut pas etre garantie en TCP
+	 - TCP est un protocole oriente datagramme
 Vrai :
-	TCP FOURNIT DES MECANISMES DE VERIFICATION DERRREUR ETENDUS. CEST PARCQUIL FOURNIT LE CONTROLE DE FLUX ET LAQUITTEMENT DES DONNEEES
-	TCP EST COMPARATIVEMENT PLUS LENT AUE UDP
-	TCP EST UN PROTOCOLE ORIENTE CONNEXION
-	LE SEAUENCAGE DES DONNEES EST UNE CARACTERISTIAUE DE TCP ca arrive dans lordre
-	TCP NE PREND PAS EN CHARGE LA DIFFUSION
+	- Le sequencage des donnees est une caracteristique de TCP (cela signifie que les paquets arrivent dans l'ordre dans le destinataire)
+	 - TCP ne prend pas en charge la diffusion
+	 - TCP fournit des mecanismes de verification d'erreur etendus. C'est parce qu'il fournit le controle de flux et l'acquittement des donees
+	 - TCP est comparativement plus lent que UDP
+	 - TCP EST UN PROTOCOLE ORIENTE CONNEXION
+	 - Le sequencage des donnees est une caracteristique de TCP (cela signifie que les paquets arrivent dans l'ordre dans le destinataire)
+	 - TCP ne prend pas en charge la diffusion
+	 - TCP est fiable car il garantit la livraison des donnees au routeur de la destination
 
 Ping :
 - ICMP est le protocole utilise
 
+> NAT (Network Adresse Translation) :
+* statique : Correspondance un pour un établie entre les adresses locales et globales
+* dynamique : mappage de plusieurs adresses locales vers plusieurs adresses globales
+* traduction d'adresses de port (PAT) : mappages de plusieurs adresses locales et globales vers une seule. Cette méthode est également appelée "surcharge" (Surcharge NAT)
 
-674141414141426552766c316e4b47784957393161746757545177796b746247715048494849584a7a426c32314779524c576671666f59466875667144755730586a7272425454336b475471657664574d53377a4e2d4c4c392d5a443346776d4f486a5178677a743353614b72654456456f645974513538336850344b4b7650745f4349575f526b427547436d566a4a564c6454756430333656364e73637a644e466c5074783630373656644d59436d6b68735247355738307a72713058465a6250553653476361564261565433714f44396a6932626166693161623158685053563934704553494e6f76394b64633237304738527048426144556a52494743765a32646467716d4c64544e314e35745a41613334636673486870644e4e62436e2d5233785146454863427236546c66725a6950534842416a476b2d684361715a6b6f3652324d6d356f4468706b354a626e585a357335385157323430655466424841487679524f7a687069707a50717661312d7150554c75654e483858422d49576b4e7445496a313966704130476e6741704b6d546a667546594f4f6b624835316f48484a655451326649754f6263494f3672762d36366c587646397a524a656f52765639494d6c5670376f305f437a47342d46742d36526f354c4b414f6a76413d3d
+
+> Attribution statique :
+* Défini par l'administrateur réseau
+* Permet un bon contrôle mais à faire que sur des petites structures car sinon la surcharge de travail peut être trop importante
+* Utile pour les routeurs et les firewall
+
+> Attribution automatique :
+* Défini par le serveur DHCP
+
+
+> Handshaking :
+* Principe sur lequel deux entités entreprennent d'abord une "négociation" avant une communication
+
+> Bootstrapping :
+* Est un compilateur écrit dans son propre langage
+
+
+> Les couches réseau :
+* Fonctionnalités nécessaires à la communication et l'organisation des fonctions
+
+   SNMP :  Simple Network Management Protocol un protocole qui permet aux administrateurs réseau de gérer les équipements du réseau et de diagnostiquer les problèmes de réseau.
+   —DHCP
+   SMTP Simple Mail Transfer Protocol est un protocole de communication utilisé pour transférer le courrier électronique (courriel) vers les serveurs de messagerie électronique
+   ARP Address Resolution Protocol  est un protocole utilisé pour traduire une adresse de protocole de couche réseau (typiquement une adresse IPv4) en une adresse de protocole de couche de liaison (typiquement une adresse MAC).
+
+Le réseau 127.0.0.0 est réservé pour les tests de boucle locale comme l'adresse IP 127.0.0.1 ("localhost") qui est une boucle locale sur le PC.
+
