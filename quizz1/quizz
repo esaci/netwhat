@@ -1,0 +1,202 @@
+http://jodies.de/ipcalc?host=185.192.159.215&mask1=19&mask2=
+
+Pour tester l'IP sur votre hôte local, sur quelle adresse IP feriez-vous une requête ping?
+
+ 127.0.0.255
+- [ ]  127.0.0.1
+ 127.0.0.0
+ 1.0.0.127
+
+Quel est le nombre maximal d'adresses IP pouvant être attribuées aux hôtes d'un sous-réseau local utilisant le masque de sous-réseau 255.255.0.0 ?
+
+ 65536
+- [ ]  65534
+ 65538
+ 32764
+ 131068
+ 32770
+ 32762
+ 131074
+ 
+Quelle est l'adresse réseau d'un hôte avec une adresse IP de 171.246.255.146/25?
+
+ 171.240.0.0
+- [ ]  171.246.255.128
+ 171.246.0.0
+ 171.128.0.0
+ 171.246.252.0
+ 0.0.0.0
+ 168.0.0.0
+
+Lequel des choix suivant n'est pas une classe d'adresse IP?
+
+- [ ]  Classe F
+ Classe D
+ Classe E
+ Classe C
+ 
+
+ Parmi les propositions suivantes, laquelle est la plage d'hôtes valide pour le sous-réseau sur lequel l'adresse IP 223.84.71.136/15 réside?
+
+ 223.84.0.3-223.85.255.254
+ 223.83.255.253-223.85.255.251
+ 223.84.0.1-223.85.255.252
+ 223.84.0.6-223.85.255.255
+ 223.84.0.0-223.85.255.249
+- [ ]  223.84.0.1-223.85.255.254
+
+Vous avez une interface sur un routeur avec l'adresse IP de 180.165.127.97/25. L'interface du routeur comprise, combien d'hôtes peuvent avoir des adresses IP sur le réseau local connectées à l'interface du routeur?
+
+ 122
+ 124
+ 64
+ 258
+ 254
+ 250
+ 62
+ 252
+- [ ]  126
+
+Laquelle des propositions suivantes est une adresse IP privée?
+
+ 93.166.99.184
+- [ ]  192.168.100.94
+ 18.103.140.4
+ 48.243.219.98
+ 235.250.245.247
+ 
+Quelle est l'adresse réseau d'un hôte avec une adresse IP de 141.230.234.236/22?
+
+ 141.128.0.0
+ 141.230.234.192
+ 141.224.0.0
+ 141.230.0.0
+ 141.230.234.128
+ 141.230.224.0
+- [ ]  141.230.232.0
+
+
+Si l'adresse IP 111.17.122.145/22 est attribuée à un port Ethernet d'un routeur, quelle adresse d'hôte pourrait communiquer avec lui?
+
+ 81.199.209.214
+ 188.16.33.213
+ 74.173.56.203
+ 72.254.124.79
+ 33.127.124.16
+- [ ]  111.17.122.17
+ 234.65.182.4
+ 
+Quelle est l'adresse réseau d'un hôte avec une adresse IP de 98.118.129.116/12?
+
+ 98.118.128.0
+ 64.0.0.0
+ 98.96.0.0
+ 98.118.0.0
+- [ ]  98.112.0.0
+ 98.118.129.0
+ 96.0.0.0
+ 98.0.0.0
+
+Parmi les propositions suivantes, laquelle est la plage d'hôtes valide pour le sous-réseau sur lequel l'adresse IP 162.217.2.211/29 réside?
+
+- [ ]  162.217.2.209-162.217.2.214
+ 162.217.2.204-162.217.2.214
+ 162.217.2.206-162.217.2.214
+ 162.217.2.209-162.217.2.219
+ 162.217.2.208-162.217.2.214
+ 162.217.2.205-162.217.2.214
+
+
+Quel est le nombre maximal d'adresses IP pouvant être attribuées aux hôtes d'un sous-réseau local utilisant le masque de sous-réseau 255.0.0.0 ?
+
+ 33554430
+- [ ]  16777214
+ 8388608
+ 16777218
+ 33554434
+ 33554432
+ 8388602
+ 16777216
+ 
+Laquelle des affirmations suivante n'est pas vraie ?
+
+ UDP ne dispose que du mécanisme de contrôle d'erreur de base utilisant des sommes de contrôle
+ UDP est un protocole orienté datagramme
+ UDP prend en charge la diffusion
+ Il n'y a pas de séquencement des données dans UDP. Si la commande est requise, elle doit être gérée par la couche application
+ UDP est plus rapide, plus simple et plus efficace que TCP
+- [ ]  UDP est fiable car il garantit la livraison des données au routeur de destination
+
+
+ Quel est le nombre maximal d'adresses IP pouvant être attribuées aux hôtes d'un sous-réseau local utilisant le masque de sous-réseau 255.255.255.248 ?
+
+- [ ]  6
+ 16
+ 18
+ 14
+ 0
+ 12
+ 10
+ 8
+ 2
+ 
+Si l'adresse IP 185.7.55.148/29 est attribuée à un port Ethernet d'un routeur, quelle adresse d'hôte pourrait communiquer avec lui?
+
+- [ ]  185.7.55.150
+ 112.67.163.17
+ 183.45.238.13
+ 40.136.34.82
+ 51.15.53.69
+ 8.148.153.38
+ 145.189.231.85
+ 250.146.187.95
+
+Parmi les propositions suivantes, laquelle est la plage d'hôtes valide pour le sous-réseau sur lequel l'adresse IP 185.192.159.215/15 réside?
+
+ 185.192.0.1-185.193.255.253
+ 185.191.255.253-185.193.255.254
+ 185.192.0.3-185.193.255.254
+- [ ]  185.192.0.1-185.193.255.254
+ 185.192.0.1-185.194.0.2
+ 185.192.0.0-185.193.255.254
+
+ Laquelle des propositions suivantes est une adresse IP privée?
+
+ 82.131.173.215
+ 170.96.148.77
+ 60.32.249.186
+ 89.194.231.63
+ 196.146.231.237
+- [ ]  10.157.162.53
+ 
+Vous avez une interface sur un routeur avec l'adresse IP de 143.220.240.221/19. L'interface du routeur comprise, combien d'hôtes peuvent avoir des adresses IP sur le réseau local connectées à l'interface du routeur?
+
+ 4092
+ 8188
+ 16386
+ 16384
+ 8186
+ 4090
+ 16378
+ 16380
+- [ ]  8190
+
+Laquelle des propisitions suivantes n'est pas vraie?
+
+- [ ]  La livraison des données à la destination ne peut pas être garantie en TCP
+ TCP fournit des mécanismes de vérification d'erreur étendus. C'est parce qu'il fournit le contrôle de flux et l'acquittement des données
+ TCP est comparativement plus lent que UDP
+ TCP est un protocole orienté connexion
+ Le séquençage des données est une caractéristique de TCP (cela signifie que les paquets arrivent dans l'ordre dans le destinataire)
+ TCP ne prend pas en charge la diffusion
+
+ Si l'adresse IP 236.29.116.74/16 est attribuée à un port Ethernet d'un routeur, quelle adresse d'hôte pourrait communiquer avec lui?
+
+ 135.23.204.56
+ 72.118.140.120
+ 241.77.69.108
+ 121.7.106.235
+ 234.199.163.38
+ 110.44.235.26
+ 92.21.63.35
+- [ ]  236.29.157.17
